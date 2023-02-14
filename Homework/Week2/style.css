@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	padding: 40px;
+	margin: 0px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+body{
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: 'Itim', cursive;
+	font-size: 20px;
+}
+
+p {
+	text-decoration: underline;
+	text-align: center;
+}
+
+#name {
+	color: #FFAA00;
+}
+
+.highlight {
+	background-color: #FFAA00;
+}
