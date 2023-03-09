@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  font-family: 'Itim', cursive;
+}
+
+html {
+  background: color;
+  background-size: cover;
+}
+
+
+/*navigation*/
+/*navigation*/
+/*navigation*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+li {
+  display: inline;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+/*  background-color: #dddddd;*/
+}
+
+/*点击时的背景颜色*/
+li a:hover {
+  background-color: #6B54AB;
+}
+
+/*被active的块颜色*/
+.active {
+  background-color: #FFFFFF;
+}
+
+
+/*body*/
+body {
+  background-color: white;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 100px;
+  text-align: center;
+/*  display: inline-block;*/
+  margin: 80px 0px 20px 20px;
+  padding: 20px;
+}
+
+h4 {
+  color: #333;
+  font-size: 30px;
+  text-align: left;
+/*  display: inline-block;*/
+  margin: 30px 0px 0px 200px;
+  padding: 0px;
+}
+
+h5 {
+  color: #333;
+  font-size: 25px;
+  text-align: center;
+/*  display: inline-block;*/
+  margin: -20px 40px 20px 20px;
+  padding: 0px;
+}
+
+p {
+/*  text-decoration: underline;*/
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin: 5%, 10%, 5%, 5%;
+}
+
+.container p{
+  color: #333;
+}
+
+.page p {
+  color: #6B54AB;
+}
+
+/*.float p{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}*/
+
+.fakeimagecon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  weight: 100%;
+  width: 100%;
+  margin: 0%;
+}
+
+/*.fakeimagecon img {
+  margin: 1.8%;
+  border: 0%;
+  width: 30%;
+  height: 100%;
+}*/
+
+.my-image img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 35%;
+
+  z-index: 999;
+}
+
+.fakeimagecon svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 30%;
+  z-index: -1;
+}
+
+/*.fakeimage {
+  width: 600px;
+  height: 300px;
+  background-color: #ccc;
+  margin: 0 100px;
+}*/
+
+
+/*Page 2*/
+/*Page 2*/
+/*Page 2*/
+
+button,
+a.knowmore {
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  margin-right: 10%;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+/*  /* width: 30%; */
+  flex-basis: 25%;
+  padding: 3%;
+  aspect-ratio: 1/1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  /* flex: 0 0 30%; */
+  overflow: hidden;
+  margin: 24px 0;
+}*/
+
+/* prepare initial state for images' transform */
+.box img {
+  transform: scale(1);
+  transform: rotate(0deg);
+  transition: all 1s ease;
+  vertical-align: middle;
+  justify-content: center;
+  width:100%;
+  /* set the box image size */
+}
+
+.box:hover img {
+  transform: scale(1.5)rotate(-20deg);
+}
+
+.mask {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(255,255,255,0.6);
+  transition: all 0.5s ease-in-out;
+}
+
+.box .mask h2 {
+  margin: 20px 0 0;
+  /* 一定要加 .box */
+}
+
+
+.mask p {
+  font-style: italic;
+}
+
+.box:hover .mask {
+  opacity: 1;
+}
+
+.box .mask h2,
+.box .mask p,
+.box .mask a {
+  opacity: 0;
+  transform: scale(0);
+
+}
+.box:hover .mask h2,
+.box:hover .mask p,
+.box:hover .mask a {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+/* Smaller than ipad classic in portrait so we will assume mobile  */
+@media only screen and (max-width:767px){
+  .container {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .hero article{
+    width: 100%;
+    padding: 25px;
+    bottom:0;
+  }
+}
+/* tablet size */
+@media screen and (min-width: 768px) and (max-width:1024px){
+  .hero article{
+    width: 75%;
+  }
+
+  body {
+    background-color: red;
+  }
+
+/* Vector 3 */
+
+
+
+/* Vector 2 */
+/*position: absolute;
+width: 1559px;
+height: 332.54px;
+left: -43px;
+top: 481.46px;
+
+background: #9180C1;
+*/
+
+
+
+
