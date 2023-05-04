@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="./css/mid2.layout.css" /> -->
+  <link rel="stylesheet" href="./css/blog.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="bg">
+    <nav>
+      <div id="menu_button_wrapper">
+        <div id="menu_button">
+          Menu&nbsp;&nbsp;
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <ul id="menu_list">
+        <li class="current_page"><a href="./aboutMe.html" class="active">About Me</a></li>
+        <li><a href="./work.html" class="active">Works</a></li>
+        <li><a href="./mid version3.html" class="active">Home</a></li>
+      </ul>
+    </nav>
+    <div class="container-fluid  bgWhite">
+      <div class="row">
+        <h4 class="conTime">2023.04.08</h4>
+      </div>
+      <div class="row">
+        <h1 class="conTitle">3D Car Modeling - Porsche Taycan</h1>
+      </div>
+      <div class="row">
+        <h3 class="conCon">
+          Introduction:<br>
+          3D modeling is an exciting and creative way to bring your ideas to life. In this project, I decided to model a Porsche Taycan, one of the most luxurious and innovative electric cars in the market. Using Maya, a popular 3D modeling software, I was able to create a realistic and detailed model of this high-performance car.<br>
+          <br>
+
+          Modeling Process:<br>
+          The first step in creating a 3D model is to gather reference images of the object you want to model. In my case, I found several high-quality images of the Porsche Taycan from various angles. I imported these images into Maya and used them as a guide to create the initial shape of the car.<br>
+          <br>
+
+          Next, I started to refine the model by adding more details, such as the headlights, wheels, and body contours. This required a lot of patience and attention to detail, as I had to make sure that the proportions and dimensions were accurate.<br>
+          <br>
+
+          Once I was happy with the basic shape of the car, I started to add more advanced details such as the interior, logos, and textures. I used different modeling techniques such as extruding, smoothing, and sculpting to achieve the desired results.<br>
+          <br>
+        </h3>
+      </div>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/1 1.png">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Car2.jpeg">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Car3.jpeg">
+          </div>
+        </div>
+
+        <!-- 左右切换按钮 -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+      </div>
+      <div class="row">
+        <h3 class="conCon">
+
+          Challenges:<br>
+          Modeling a complex object like a car can be challenging, especially when it comes to achieving a high level of detail. One of the main challenges I faced was getting the proportions right, as even a small mistake can make the entire model look off.<br>
+          <br>
+
+          Another challenge was creating the interior of the car, as it required a lot of attention to detail and a good understanding of the car's design. However, with patience and perseverance, I was able to overcome these challenges and create a model that accurately represented the Porsche Taycan.<br>
+          <br>
+
+          Conclusion:<br>
+          In conclusion, creating a 3D model of the Porsche Taycan using Maya was an enjoyable and rewarding experience. It allowed me to showcase my skills as a 3D artist and challenged me to push the limits of my creativity. I hope that this project has inspired you to try your hand at 3D modeling and explore the endless possibilities it offers.<br>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+    function addListener(element, type, callback) {
+      if (element.addEventListener) {
+        element.addEventListener(type, callback);
+      } else if (element.attachEvent) {
+        element.attachEvent('on' + type, callback);
+      }
+    }
+
+    addListener(document, 'DOMContentLoaded', function () {
+
+      var mq = window.matchMedia("(max-width: 760px)");
+      if (mq.matches) {
+        document.getElementById("menu_list").classList.add("hidden");
+      }
+
+      addListener(document.getElementById("menu_button"), 'click', function () {
+        document.getElementById("menu_list").classList.toggle("hidden");
+      });
+
+      addListener(window, 'resize', function () {
+        var width = window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+
+        if (width > 760) {
+          document.getElementById("menu_list").classList.remove("hidden");
+        } else {
+          document.getElementById("menu_list").classList.add("hidden");
+        }
+      });
+
+    });
+  </script>
+</body>
+
+</html>

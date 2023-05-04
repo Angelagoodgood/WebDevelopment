@@ -1,0 +1,112 @@
+@font-face {
+  font-family: Otomanopee One;
+  src: url(../OtomanopeeOne-Regular-Vertical.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+body,
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Itim', cursive;
+}
+
+
+.bg {
+  width: 100%;
+  min-height: 100%;
+  background-color: #9180C1;
+}
+
+.bg ul li a {
+  color: #FFFFFF;
+}
+
+.bgWhite {
+  background-color: white;
+  width: 80%;
+  padding: 8%;
+}
+
+.conTime {
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #696984;
+}
+
+.conTitle {
+  font-family: 'Otomanopee One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 72px;
+  color: #000000;
+  transform: matrix(1, 0, -0.11, 0.99, 0, 0);
+}
+
+.conCon {
+  margin-top: 4%;
+  font-family: 'Abhaya Libre';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  font-size: 20px;
+  display: inline-block;
+  align-items: center;
+  color: #000000;
+  word-wrap: break-word;
+  word-break: keep-all;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 601px) {
+  .bgWhite .row h1 {
+    font-size: 50px;
+  }
+
+  .bgWhite .row h3 {
+    font-size: 20px
+  }
+
+  .bgWhite .row h4 {
+    font-size: 25px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bgWhite .row h1 {
+    font-size: 35px;
+  }
+
+  .bgWhite .row h3 {
+    font-size: 15px
+  }
+
+  .bgWhite .row h4 {
+    font-size: 20px
+  }
+}
+
+@media (max-width: 420px) {
+  .bgWhite .row h1 {
+    font-size: 25px;
+  }
+
+  .bgWhite .row h3 {
+    font-size: 13px
+  }
+
+  .bgWhite .row h4 {
+    font-size: 15px
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}

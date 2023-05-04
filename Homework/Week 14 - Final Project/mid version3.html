@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angela's Portfolio</title>
+	<link rel="stylesheet" href="./css/mid2.layout.css" />
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+		integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+		crossorigin="anonymous"></script>
+</head>
+
+<nav>
+	<ul>
+		<li><a href="./aboutMe.html" class="active">About Me</a></li>
+		<li><a href="./work.html" class="active">Works</a></li>
+		<li><a href="#" class="active">Home</a></li>
+	</ul>
+</nav>
+
+
+
+<!-- Page 1 -->
+<header>
+	<h1>I am Angela Fu</h1>
+	<h3 style="color:#6B54AB;">Be prepared. Stay upbeat. Embrace challenges!</h3>
+
+	<div class="vectors">
+		<div class="page1imagebox">
+			<img id="Irregular" src="./images/irregular.png" class="my-image">
+			<img id="Moji3" src="./images/moji3.png" class="my-image" />
+		</div>
+
+		<p id="Design">Design</p>
+		<p id="Sustainability">Sustainability</p>
+		<p id="Leadership">Leadership</p>
+
+	</div>
+</header>
+
+<!-- Page 2 -->
+
+<body>
+	<div class="page2">
+		<div class="subnav">
+			<!-- 			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+					<i class="fas fa-bars"></i>
+			</label> -->
+			<ul>
+				<li><a href="#" class="active">All</a></li>
+				<li><a href="./page1.html" class="active">Design</a></li>
+				<li><a href="./page2.html" class="active">Business Case</a></li>
+				<li><a href="https://jf4268.wixsite.com/angelasinventory" class="active">Other</a></li>
+			</ul>
+		</div>
+
+
+		<div class="container">
+			<div class="gallery">
+
+				<div class="imagebox">
+					<a href="./Blog.html"><img src="./images/3D Modeling.jpeg" /></a>
+					<h5>3D Modeling<br>"Bear's Room"</h5>
+				</div>
+
+				<div class="imagebox">
+					<a href="./Blog.html"><img src="./images/正面图.png" /></a>
+					<h5>Logo Design<br>"USPGC Eagle"</h5>
+				</div>
+
+				<div class="imagebox">
+					<!-- <a href="https://special-atmosphere-83e.notion.site/Tomorrow-APP-802a3341eaa240d491d0ec07e0c1a8a3" img src="Eco-Community.jpeg" /a> -->
+					<a href="./Blog.html"><img src="./images/1 2.png" /></a>
+					<h5>3D Modeling<br>Porsche Taycan</h5>
+				</div>
+
+				<div class="imagebox">
+					<img src="./images/UIUX.png" />
+					<h5>UI/UX Design<br>Tomorrow APP</h5>
+				</div>
+
+				<div class="imagebox">
+					<img src="./images/Cat Modeling.jpeg" />
+					<h5>3D Modeling<br>Cute </h5>
+				</div>
+
+				<div class="imagebox">
+					<img src="./images/Environment.jpeg" />
+					<h5>Business Deck<br>Zero-food Waste</h5>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>@2023 by Angela Fu<br>Contact Me: jf4268@nyu.edu</p>
+	</footer>
+
+	<script type="text/javascript">
+		// retrieve the stored scroll position
+		var scrollPosition = parseInt(localStorage.getItem('scrollPosition'));
+
+		// if the scroll position is valid, scroll to it
+		if (!isNaN(scrollPosition)) {
+		  window.scrollTo(0, scrollPosition);
+		}
+
+		// store the current scroll position when the user leaves the page
+		window.addEventListener('beforeunload', function() {
+		  localStorage.setItem('scrollPosition', window.scrollY);
+		});
+	</script>
+
+</body>
+
+</html>
